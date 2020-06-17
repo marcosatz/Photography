@@ -1,0 +1,46 @@
+h1, h2, h3, h4, h5, p, a {
+    text-decoration: none;
+    padding: 0;
+    margin: 0;
+    font-family: $raleway;
+}
+
+h1 {
+    font-size: 36px;
+    margin-bottom: 50px;
+    color: $black;
+
+    @include media (md-min) {
+        font-size: 24px;
+    }
+}
+
+h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+h3 {
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+h4 {
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+h5 {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.page-title {
+    font-size: 50px;
+    margin: 0 auto;
+}

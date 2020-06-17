@@ -1,0 +1,428 @@
+@import url("https://fonts.googleapis.com/css?family=Raleway:300,400,700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+  display: flex;
+}
+
+.d-flex {
+  display: flex;
+}
+
+@font-face {
+  src: url("../../fonts/Raleway-Regular.ttf");
+}
+h1, h2, h3, h4, h5, p, a {
+  text-decoration: none;
+  padding: 0;
+  margin: 0;
+  font-family: "Raleway", sans-serif;
+}
+
+h1 {
+  font-size: 36px;
+  margin-bottom: 50px;
+  color: #000;
+}
+@media screen and (min-width: 768px) {
+  h1 {
+    font-size: 24px;
+  }
+}
+
+h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+h3 {
+  font-size: 20px;
+  margin-bottom: 15px;
+}
+
+h4 {
+  font-size: 18px;
+  margin-bottom: 15px;
+}
+
+h5 {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+p {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.page-title {
+  font-size: 50px;
+  margin: 0 auto;
+}
+
+header {
+  position: relative;
+}
+
+.header-top {
+  background-color: #000;
+  width: 100%;
+  padding: 17px 0;
+  min-height: 180px;
+  display: flex;
+}
+@media screen and (max-width: 767px) {
+  .header-top {
+    min-height: auto;
+    padding: 10px 0;
+  }
+}
+.header-top .header-left {
+  width: 75%;
+  display: flex;
+}
+@media screen and (max-width: 767px) {
+  .header-top .header-left {
+    display: none;
+    position: absolute;
+    top: 99%;
+    left: 0;
+    width: 100%;
+    background-color: #000;
+    padding: 20px 0;
+  }
+}
+.header-top .header-left .nav-menu {
+  position: relative;
+  min-width: 375px;
+}
+@media screen and (max-width: 767px) {
+  .header-top .header-left .nav-menu {
+    min-width: 320px;
+    width: 80%;
+    margin: 0 auto;
+  }
+}
+.header-top .header-left .nav-menu ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  width: 100%;
+  flex-direction: column;
+  flex-wrap: wrap;
+  max-height: 170px;
+  column-count: 2;
+}
+@media screen and (max-width: 767px) {
+  .header-top .header-left .nav-menu ul {
+    text-align: center;
+  }
+}
+.header-top .header-left .nav-menu ul li {
+  margin-bottom: 10px;
+}
+.header-top .header-left .nav-menu ul li a {
+  color: #E3f6fa;
+  font-weight: 700;
+  font-family: "Raleway", sans-serif;
+  text-transform: uppercase;
+}
+.header-top .header-left .nav-menu ul li a:hover {
+  color: #fff;
+  cursor: pointer;
+}
+.header-top .header-left .nav-menu::after {
+  content: "";
+  width: 2px;
+  height: 140px;
+  background-color: #E3f6fa;
+  position: absolute;
+  top: 0;
+  left: 45%;
+}
+@media screen and (max-width: 767px) {
+  .header-top .header-left .nav-menu::after {
+    left: 50%;
+  }
+}
+.header-top .header-left .icons-list {
+  width: 50%;
+  display: flex;
+}
+@media screen and (max-width: 767px) {
+  .header-top .header-left .icons-list {
+    width: 160px;
+    margin: 0 auto;
+    margin-top: 30px;
+  }
+}
+.header-top .header-left .icons-list .icon {
+  color: #fff;
+  background-color: #E3f6fa;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 10px;
+}
+.header-top .header-left .icons-list .icon:hover {
+  background-color: #fff;
+  cursor: pointer;
+}
+.header-top .header-left .icons-list .icon svg {
+  color: #4D4C4C;
+  padding: 1.4px;
+}
+.header-top .header-right {
+  width: 25%;
+}
+@media screen and (max-width: 767px) {
+  .header-top .header-right {
+    position: relative;
+    width: 100%;
+    min-height: 100px;
+  }
+}
+.header-top .header-right .d-flex {
+  justify-content: space-between;
+  align-items: center;
+}
+.header-top .header-right .logo {
+  width: 100%;
+  text-align: center;
+  margin-top: 75px;
+}
+@media screen and (max-width: 767px) {
+  .header-top .header-right .logo {
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+}
+.header-top .header-right .logo a {
+  font-size: 50px;
+  color: #E3f6fa;
+}
+.header-top .header-right .btn-menu {
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media screen and (min-width: 768px) {
+  .header-top .header-right .btn-menu {
+    display: none;
+  }
+}
+.header-top .header-right .btn-menu svg {
+  color: #fff;
+}
+
+.header-bottom {
+  width: 100%;
+  background-color: #4D4C4C;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+@media screen and (max-width: 767px) {
+  .header-bottom .sticky-nav-menu {
+    position: relative;
+    background-color: #000;
+    z-index: 10;
+  }
+}
+.header-bottom .sticky-nav-menu ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+@media screen and (max-width: 767px) {
+  .header-bottom .sticky-nav-menu ul {
+    position: absolute;
+    top: 20px;
+    left: 0;
+    width: 100%;
+    background-color: #000;
+    display: block;
+    text-align: center;
+  }
+}
+.header-bottom .sticky-nav-menu ul li {
+  padding: 10px 10px;
+}
+@media screen and (max-width: 767px) {
+  .header-bottom .sticky-nav-menu ul li {
+    padding: 10px 0;
+  }
+}
+.header-bottom .sticky-nav-menu ul li a {
+  color: #fff;
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+@media screen and (max-width: 991px) {
+  .header-bottom .sticky-nav-menu ul li a {
+    font-weight: 400;
+    text-transform: none;
+  }
+}
+.header-bottom .sticky-nav-menu ul li:hover {
+  background-color: #A45847;
+}
+@media screen and (max-width: 767px) {
+  .header-bottom .sticky-nav-menu ul li:hover {
+    background-color: transparent;
+  }
+}
+.header-bottom .sticky-nav-menu ul .active {
+  background-color: #A45847;
+}
+@media screen and (max-width: 767px) {
+  .header-bottom .sticky-nav-menu ul .active {
+    background-color: transparent;
+  }
+}
+.header-bottom .d-flex {
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+.header-bottom .search-bar {
+  padding-top: 7px;
+  width: 20px;
+}
+@media screen and (max-width: 767px) {
+  .header-bottom .search-bar {
+    background-color: transparent;
+    padding-top: 0;
+  }
+}
+.header-bottom .search-bar .search-icon {
+  width: 20px;
+  height: 20px;
+}
+.header-bottom .search-bar .search-icon svg {
+  padding: 2px;
+}
+.header-bottom .btn-menu {
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media screen and (min-width: 768px) {
+  .header-bottom .btn-menu {
+    display: none;
+  }
+}
+.header-bottom .btn-menu svg {
+  color: #fff;
+}
+
+.search-bar {
+  position: relative;
+  margin-left: auto;
+  width: 30px;
+}
+@media screen and (max-width: 767px) {
+  .search-bar {
+    margin-left: 0;
+  }
+}
+.search-bar .search-icon {
+  background-color: #E3f6fa;
+  width: 30px;
+  height: 30px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+@media screen and (max-width: 767px) {
+  .search-bar .search-icon {
+    background-color: transparent;
+  }
+}
+.search-bar .search-icon svg {
+  color: #4D4C4C;
+}
+@media screen and (max-width: 767px) {
+  .search-bar .search-icon svg {
+    color: #fff;
+  }
+}
+.search-bar .search-form {
+  position: absolute;
+  top: 50px;
+  left: -172px;
+  background-color: #ffb23f;
+  padding: 6px;
+  border-radius: 5px;
+  display: none;
+}
+@media screen and (max-width: 767px) {
+  .search-bar .search-form {
+    top: 0;
+    left: 30px;
+    background-color: transparent;
+    border-radius: 0;
+  }
+}
+.search-bar .search-form form {
+  position: relative;
+}
+.search-bar .search-form form input {
+  border: none;
+  border-radius: 5px;
+  height: 20px;
+  width: 190px;
+}
+@media screen and (max-width: 767px) {
+  .search-bar .search-form form input {
+    background-color: transparent;
+    border-radius: 0;
+    border-bottom: solid 1px #fff;
+    color: #fff;
+  }
+}
+.search-bar .search-form form::after {
+  content: "";
+  border-left: solid 10px transparent;
+  border-right: solid 10px transparent;
+  border-bottom: solid 20px #ffb23f;
+  border-top: 0;
+  position: absolute;
+  top: -26px;
+  right: -2px;
+}
+@media screen and (max-width: 767px) {
+  .search-bar .search-form form::after {
+    display: none;
+  }
+}
+
+main .section, main .section2 {
+  width: 100%;
+  height: 500px;
+  background-color: #e4e4e4;
+}
+main .section2 {
+  background-color: #fff;
+}
+
+/*# sourceMappingURL=style.css.map */

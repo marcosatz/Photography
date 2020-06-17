@@ -1,0 +1,367 @@
+header{
+    position: relative;
+}
+
+.header-top {
+    background-color: $black;
+    width: 100%;
+    padding: 17px 0;
+    min-height: 180px;
+    display: flex;
+
+    @include media (md-max) {
+        min-height: auto;
+        padding: 10px 0;
+    }
+
+    .header-left {
+        width: 75%;
+        display: flex;
+
+        @include media (md-max) {
+            display: none;
+            position: absolute;
+            top: 99%;
+            left: 0;
+            width: 100%;
+            background-color: $black;
+            padding: 20px 0;
+        }
+
+        .nav-menu {
+            position: relative;
+            min-width: 375px;
+
+            @include media (md-max) {
+                min-width: 320px;
+                width: 80%;
+                margin: 0 auto;
+            }
+
+            ul {
+                margin: 0;
+                padding: 0;
+                list-style: none;
+                width: 100%;
+                flex-direction: column;
+                flex-wrap: wrap;
+                max-height: 170px;
+                column-count: 2;
+
+                @include media (md-max) {
+                    text-align: center;
+                }
+
+                li {
+                    margin-bottom: 10px;
+
+                    a {
+                        color: $sky;
+                        font-weight: $bold;
+                        font-family: $raleway;
+                        text-transform: uppercase;
+
+                        &:hover {
+                            color: $white;
+                            cursor: pointer;
+                        }
+                    }
+                }
+            }
+
+            &::after {
+                content: '';
+                width: 2px;
+                height: 140px;
+                background-color: $sky;
+                position: absolute;
+                top: 0;
+                left: 45%;
+
+                @include media (md-max) {
+                    left: 50%;
+                }
+            }
+        }
+
+        .icons-list {
+            width: 50%;
+            display: flex;
+
+            @include media (md-max) {
+                width: 160px;
+                margin: 0 auto;
+                margin-top: 30px;
+            }
+
+            .icon {
+                color: #fff;
+                background-color: $sky;
+                width: 20px;
+                height: 20px;
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin-left: 10px;
+
+                &:hover {
+                    background-color: $white;
+                    cursor: pointer;
+                }
+
+                svg {
+                    color: $dark;
+                    padding: 1.4px;
+                }
+            }
+        }
+    }
+
+    .header-right {
+        width: 25%;
+        
+        @include media (md-max) {
+            position: relative;
+            width: 100%;
+            min-height: 100px;
+        }
+
+        .d-flex {
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            width: 100%;
+            text-align: center;
+            margin-top: 75px;
+
+            @include media (md-max) {
+                margin-top: 10px;
+                margin-bottom: 10px;
+            }
+
+            a {
+                font-size: 50px;
+                color: $sky;
+            }
+        }
+
+        .btn-menu {
+            width: 30px;
+            height: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            @include media (md-min) {
+                display: none;
+            }
+
+            svg {
+                color: $white;
+            }
+        }
+    }
+}
+
+.header-bottom {
+    width: 100%;
+    background-color: $dark;
+    position: fixed;
+    top: 0;
+    left: 0;
+    // display: none;
+
+    .sticky-nav-menu {
+        @include media(md-max) {
+            position: relative;
+            background-color: $black;
+            z-index: 10;
+        }
+        
+        ul {
+            display: flex;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+
+            @include media(md-max) {
+                position: absolute;
+                top: 20px;
+                left: 0;
+                width: 100%;
+                background-color: $black;
+                display: block;
+                text-align: center;
+            }
+
+            li {
+                padding: 10px 10px;
+
+                @include media(md-max) {
+                    padding: 10px 0;
+                }
+            
+
+                a {
+                    color: $white;
+                    font-size: 14px;
+                    font-weight: $bold;
+                    text-transform: uppercase;
+
+                    @include media(lg-max) {
+                        font-weight: $regular;
+                        text-transform: none;
+                    }
+                }
+
+                &:hover {
+                    background-color: $active;
+
+                    @include media(md-max) {
+                        background-color: transparent;
+                    }
+                
+                }
+            }
+
+            .active {
+                background-color: $active;
+
+                @include media(md-max) {
+                    background-color: transparent;
+                }
+            }
+        }
+    }
+
+    .d-flex {
+        width: 100%;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .search-bar {
+        padding-top: 7px;
+        width: 20px;
+
+        @include media(md-max) {
+            background-color: transparent;
+            padding-top: 0;
+        }
+
+        .search-icon {
+            width: 20px;
+            height: 20px;
+
+            svg {
+                padding: 2px;
+            }
+        }
+    }
+
+    .btn-menu {
+        width: 30px;
+        height: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        @include media (md-min) {
+            display: none;
+        }
+
+        svg {
+            color: $white;
+        }
+    }
+}
+
+.search-bar {
+    position: relative;
+    margin-left: auto;
+    width: 30px;
+
+    @include media (md-max) {
+        margin-left: 0;
+        // margin-right: auto;
+    }
+
+    .search-icon {
+        background-color: $sky;
+        width: 30px;
+        height: 30px;
+        border-radius: 5px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+
+        @include media (md-max) {
+            background-color: transparent;
+        }
+
+        svg {
+            color: $dark;
+
+            @include media (md-max) {
+                color: $white;
+            }
+        }
+    }
+
+    .search-form {
+        position: absolute;
+        top: 50px;
+        left: -172px;
+        background-color: $gold;
+        padding: 6px;
+        border-radius: 5px;
+        display: none;
+
+        @include media (md-max) {
+            top: 0;
+            left: 30px;
+            background-color: transparent;
+            border-radius: 0;
+        }
+
+
+        form {
+            position: relative;
+
+            input {
+                border: none;
+                border-radius: 5px;
+                height: 20px;
+                width: 190px;
+                
+                @include media (md-max) {
+                    background-color: transparent;
+                    border-radius: 0;
+                    border-bottom: solid 1px $white;
+                    color: $white;
+                }
+            }
+
+            &::after {
+                content: '';
+                // width: 10px;
+                border-left: solid 10px transparent;
+                border-right: solid 10px transparent;
+                border-bottom: solid 20px $gold;
+                border-top: 0;
+                position: absolute;
+                top: -26px;
+                right: -2px;
+
+                @include media (md-max) {
+                    display: none;
+                }
+            }
+        }
+
+    }
+}
