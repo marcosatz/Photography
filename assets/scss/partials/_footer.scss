@@ -1,0 +1,101 @@
+footer {
+    background-color: $blue3;
+    padding-top: 100px;
+
+    .footer-top {
+        background-color: $blue;
+        margin-right: 50px;
+        border-radius: 0 100px 0 0;
+
+        @include media (md-max) {
+            border-radius: 0 50px  0 0;
+        }
+        
+        @include media (sm-max) {
+            margin-right: 0;
+            border-radius: 0 0px  0 0;
+        }
+        
+        h2 {
+            color: $white; 
+            word-wrap: break-word;
+            text-align: left;
+        }
+
+        p {
+            color: $white;
+            @include media (md-max) {
+                margin-bottom: 50px;
+            }
+        }
+
+        .button {
+            height: 100%;
+            width: 100%;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+
+            @include media (md-max) {
+                justify-content: flex-start;
+            }
+            
+            button {
+                &:hover {
+                    border: solid 2px $white;
+                }
+            }
+        }
+
+    }
+
+    .separator {
+        width: 70%;
+        height: 1px;
+        background-color: $blue3;
+        margin-top: 50px;
+    }
+
+    .footer-bottom {
+        padding: 30px 0;
+        color: $white;
+
+        .logo {
+
+            h3 {
+                margin-left: 20px;
+                color: $white;
+            }
+        }
+
+        ul {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+
+            @include media (md-max) {
+                margin-bottom: 30px;
+            }
+        }
+
+        .aboutUs {
+            p {
+                font-weight: $bold;
+                margin-bottom: 20px;
+            }
+            
+            ul {
+                li {
+                    
+                    a {
+                        color: $white;
+                    }
+                }
+            }
+        }
+
+        .fallowUs {
+            @extend .aboutUs;
+        }
+    }
+}
