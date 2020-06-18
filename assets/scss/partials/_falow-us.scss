@@ -1,0 +1,49 @@
+#falow-us {
+    position: fixed;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+
+    .item-social {
+        // background-color: $black;
+        display: flex;
+        align-items: center;
+        margin-bottom: 3px;
+
+        &:hover {
+            .name {
+                display: block;
+                transition: ease-in-out 5000ms;
+            }
+        }
+
+        .name {
+            min-width: 120px;
+            background-color: $black;
+            display: none;
+            padding: 15px 0;
+            transition: ease-in-out 5000ms;
+
+            p {
+                color: $white;
+                font-size: 14px;
+                text-align: center;
+                font-weight: $light;
+                margin: 0;
+            }
+        }
+
+        .icon-fixed {
+            background-color: $black;
+            width: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 15px 0;
+
+            svg {
+                color: $white;
+            }
+        }
+    }
+}
